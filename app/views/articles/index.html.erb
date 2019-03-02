@@ -15,6 +15,7 @@
       <td><%= m.description%></td>
       <td><%= link_to"Edit", edit_article_path(m)%></td>
       <td><%= link_to"Show", article_path(m)%></td>
+      <td><%= link_to"Destroy", article_path(m), method: :delete, data:{confirm: "Zhun bo"} %></td>
     </tr>
   
   <% end %>
