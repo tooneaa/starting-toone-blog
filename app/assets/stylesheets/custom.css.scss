@@ -1,2 +1,57 @@
+$navbar-default-bg: #08088A;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#Brand {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  color: white; 
+  float: left;
+  letter-spacing: -1px;
+
+}
+
+#Brand:hover {
+  color: white;
+  text-transform: uppercase;
+  
+}
+
+.center {
+  text-align: center;
+  color: white;
+  letter-spacing:-1px;
+  
+  }
+  
+.jumbotron {
+  background-image: asset-url('bridge.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40em;
+  background-position: 45%, 0% ;
+  margin-top: 2em; 
+}
+
+.jumbotron h1 {
+  padding-bottom: 5px ;
+  // border: white solid;
+  
+}
+
+footer{
+  border-top: 1px solid black;
+  color: grey;
+  margin-top:45px;
+}
+
+footer nav {
+  float: right;
+}
+
+footer small{
+  float: left;
+}
+
