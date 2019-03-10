@@ -9,7 +9,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <%= form_for (@article, :html => {class: "form-horizontal", role:"form"}) do |f|%>
+    <%= form_for(@article,  :html => {class: "form-horizontal", role: "form"}) do |f|%>
       <div class="form-group">
         <div class="control-label col-sm-2">
           <%= f.label :title %>
@@ -35,4 +35,6 @@
     <% end %> 
   </div>
 </div>
-<p><%= link_to"back to article listing", articles_path%></p>
+<div class="col-sm-4 col-sm-offset-4">
+  [ <%= link_to"Cancel and return to article listing", articles_path%> ]
+</div>
