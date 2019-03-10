@@ -37,7 +37,18 @@ $navbar-default-bg: #08088A;
 
 .jumbotron h1 {
   padding-bottom: 5px ;
+  font-weight: bold;
+  letter-spacing: -1px;
+ 
   // border: white solid;
+  
+}
+
+.btn-home {
+  font-size: 1.7em;
+  width: 8em;
+  font-weight: bold;
+  background-color: green;
   
 }
 
@@ -45,10 +56,20 @@ footer{
   border-top: 1px solid black;
   color: grey;
   margin-top:45px;
+  padding-top: 5px;
 }
 
-footer nav {
+footer nav ul {
   float: right;
+  list-style: none;
+}
+
+footer nav ul li {
+  display: inline;
+  float: left;
+  padding-left: 7px;
+  padding-right: 7px;
+  
 }
 
 footer small{
