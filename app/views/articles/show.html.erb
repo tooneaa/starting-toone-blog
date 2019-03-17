@@ -1,16 +1,16 @@
 <h2 align="center" style="width:90%;"> Title: <%= @article.title%></h2>
  
   
-
-<div class="well col-xs-8 col-xs-offset-2 div-check">
-  <h4 class="center description"> Description </h4> <hr> 
-  <%= simple_format(@article.description)%>
- 
-   <div class="article-actions">
-    <%= link_to"back to article listing", articles_path, class:"btn btn-xs btn-primary"%>
-    <%= link_to"edit this article", edit_article_path, class:"btn btn-xs btn-success"%>
-    <%= link_to "Delete this article", article_path(@article), method: :delete, data: { confirm: "Delete this?"}, class:"btn btn-xs btn-danger"%>
-   </div> 
+<div class="row">
+ <div class="well col-xs-8 col-xs-offset-2 div-check">
+   <h4 class="center description"> Description </h4> <hr> 
+   <%= simple_format(@article.description)%>
   
+    <div class="article-actions">
+     <%= link_to"back to article listing", articles_path, class:"btn btn-xs btn-primary"%>
+     <%= link_to"edit this article", edit_article_path, class:"btn btn-xs btn-success"%>
+     <%= link_to "Delete this article", article_path(@article), method: :delete, data: { confirm: "Delete this?"}, class:"btn btn-xs btn-danger"%>
+    </div> 
+   
   </div>  
-  
+ </div>
