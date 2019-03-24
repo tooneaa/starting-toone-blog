@@ -1,0 +1,23 @@
+<h1 align= "center" style="width:90%"> All Alpha Bloggers</h1>
+  <div align="center"> 
+    <% @user.each do |user|%>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="well well-lg">
+          <ul class="listing">
+            <% if user.email %>
+              <% gravure = gravatar_for(user)%>
+              <%= content_tag :li , (link_to gravure, user_path(user))%>
+            <% else %>
+            <%end%>
+            <li class="article-title">
+              <%= link_to user.username.capitalize, user_path(user)%>
+            </li>
+            <li><small><%= pluralize(user.articles.count, 'article') if user.articles%> </small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+ 
+  <% end %> 
+  </div> 

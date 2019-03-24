@@ -23,8 +23,10 @@ $navbar-default-bg: #08088A;
   text-align: center;
   color: white;
   letter-spacing:-1px;
-  
   }
+.li strong, .li small {
+  color: black;
+}
   
 .jumbotron {
   background-image: asset-url('bridge.jpg');
@@ -82,7 +84,10 @@ $navbar-default-bg: #08088A;
   padding-top: 10px;
   
 }
-
+.listing{
+  list-style: none;
+  padding-left: 0px;
+}
 footer{
   border-top: 1px solid black;
   color: grey;
