@@ -27,13 +27,13 @@ class ArticlesController < ApplicationController
       if @article.update(article_params)
       flash[:success] = "Article was updated successfully"
       redirect_to article_path(@article)
-    else
+      else
       render 'edit'
-    end
+      end
   end
   
   def index
-    @article = Article.all
+    @art = Article.paginate(page: params[:page], per_page: 5)
   end
   
   def destroy
