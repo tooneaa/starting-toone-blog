@@ -7,18 +7,19 @@ class UsersController < ApplicationController
   end
   
   def index
-   
-    @user = User.paginate(page: params[:page],  per_page: 5)
+      @user = User.paginate(page: params[:page],  per_page: 5)
   end
+  
   def create
-  @user = User.new(user_params)
-    if @user.save
-      flash[:success] = "Account successfully created, welcome to Alpha Blog #{@user.username}"
-      redirect_to articles_path
+    @user = User.new(user_params)
+    session[:user_id] = @user.id
+      if @user.save
+        flash[:success] = "Account successfully created, welcome to Alpha Blog #{@user.username}"
+        redirect_to user_path(@user)
+        
+      else render 'new'
       
-    else render 'new'
-    
-    end
+      end
   end
   
   def edit
